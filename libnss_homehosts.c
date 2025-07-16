@@ -1,3 +1,4 @@
+#define _DEFAULT_SOURCE
 
 #include <arpa/inet.h>
 #include <nss.h>
@@ -10,7 +11,11 @@
 #include <string.h>
 #include <limits.h>
 #include <ctype.h>
+#include <stdbool.h>
+#include <linux/limits.h>
+#include <bits/posix1_lim.h>
 #include "res_hconf.h"
+
 
 
 struct ipaddr {
@@ -19,7 +24,7 @@ struct ipaddr {
 	struct in6_addr ip6;
 };
 
-typedef int bool;
+// typedef int bool;
 #define TRUE 1
 #define FALSE 0
 
